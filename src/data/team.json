@@ -1,0 +1,9 @@
+{
+    "member":[
+        {"id":"1","photo":"../image/member1","name":"John","age":"32","height":"320","weight":"52","mvp":"3"},
+        {"id":"2","photo":"../image/member2","name":"Greg","age":"32","height":"320","weight":"52","mvp":"3"},
+        {"id":"3","photo":"../image/member3","name":"Majonez","age":"32","height":"320","weight":"52","mvp":"3"},
+        {"id":"4","photo":"../image/member4","name":"Waleusz","age":"32","height":"320","weight":"52","mvp":"3"},
+        {"id":"5","photo":"../image/member5","name":"Pedrillo","age":"32","height":"320","weight":"52","mvp":"3"}
+    ]
+}
