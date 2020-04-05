@@ -3,9 +3,16 @@ class Question extends React.Component {
     render() {
 
       return ( 
-      <div className="Question">
-          <p>Name: {this.props.name}</p>
-          <p>Content: {this.props.text}</p>
+      <div className="question">
+          <p onClick={(event)=>{
+            const x=event.target.nextSibling
+            if(x.style.display ==="block"){
+              x.style.display="none"
+            }else{
+              x.style.display="block"
+            }
+          }}>> {this.props.text}</p>
+          <p>{this.props.answer}</p>
       </div>
       )
   }}

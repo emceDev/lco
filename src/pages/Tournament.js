@@ -1,9 +1,11 @@
 import React from 'react';
-import Gallery from '../components/Gallery';
 function Tournament() {
   return (
-    <div className="Tournament">
-     <Gallery/>
+    <div className="tournament">
+      <div className="tournamentText">
+      Something Big coming soon...
+      </div>
+
     </div>
   );
 }

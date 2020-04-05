@@ -1,18 +1,41 @@
 import React from 'react';
 import Navigation from '../components/Navigation'
-import members from '../data/team.json'
 import TeamMember from '../components/TeamMember';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+const members = require("../data/team.json")
 
 
+function getPhoto(){
+  return[{
+    src:require("../images/member1.png")
+  },
+  {
+    src:require("../images/member1.png")
+  },
+  {
+    src:require("../images/member1.png")
+  },
+  {
+    src:require("../images/member1.png")
+  },
+  {
+    src:require("../images/member1.png")
+  },
+  {
+    src:require("../images/member1.png")
+  }]
+}
+const photo = getPhoto()
 function Team() {
 return (
     <div className="team">
-      
       <div className="teamContainer">
       {
       members.member.map(member =>{
       return <TeamMember 
-      key={member.id} img={member.photo}name={member.name} age={member.age} 
+      key={member.id} img={photo[member.id].src}name={member.name} age={member.age} 
       height={member.height} weight={member.weight} mvp={member.mvp}/>
       })
     }

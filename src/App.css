@@ -15,9 +15,10 @@
   justify-self: stretch;
 }
 .tag{
+  border-radius: 2px;
   max-width: 76vw;
   margin-bottom: 10vh;
-  background-color: rgba(183, 93, 81, 0.678);
+  background-color: #420463ed;
   display: inline-block;
   font-size: 5vw;
   color:rgb(226, 207, 35);
@@ -25,12 +26,14 @@
 }
 
 .video{
-  height: 50vh;
-  width: 50vw;
-  background: rgba(250, 128, 114, 0.746);
-  margin-left: 25%;
+  margin: 0 auto;
+  width: fit-content;
 }
-
+.video iframe{
+  border-radius: 1px;
+  animation: appear 3s;
+}
+/* Navigation section */
 .navigation{
   color:silver;
   position: absolute;
@@ -43,15 +46,15 @@
   height: 10vh;
   padding: 0 2vw 0 2vw;
   width: fit-content;
-  font-size: x-large;
-  background-color: rgba(150, 80, 131, 0.863);
+  font-size: 2.5vw;
+  background-color: rgba(170, 56, 139, 0.863);
+  border-radius: 1px;
 }
 .navigation a{
   color:inherit;
   width: fit-content;
   padding:1vh;
 }
-
 .navigation :hover{
   color:rgb(248, 245, 245);
   animation:lighten 0.5s;
@@ -68,37 +71,33 @@
   from{color:silver}
   to{color:yellow}
 }
-/* Team section */
+.navigation div{
+  display: flex;
+  flex-direction: column;
+}
+.navigation div *{
+  font-size: 60%;
+  padding:0px;
+}
+/* team section */
 .team{
-  height: 130vh;
-  background-image: url(./images/img2.png);
-  background-size: cover;
+  padding-top: 20vh;
+  background-color: rgba(158, 24, 31, 0.89);
 }
 .teamContainer{
-  position: relative;
-  top:40vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  width:98vw;
 }
-.teamMember{
-  background-color: rgba(57, 56, 65, 0.287);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:1vw;
-  text-align:left;
+.teamContainer .card{
+  animation: appear 1s;
 }
-.teamMember table{
-  width: 15vw;
-  height: 40vh;
-  color:rgb(87, 82, 76);
-  font-size:x-large;
+@keyframes appear{
+  0%{opacity: 0.5;}
+  100%{opacity: 1;}
 }
-.teamMember td{
-  border-radius: 5%;
-  background-color: rgba(192, 192, 192, 0.794);
-}
+
+
 /* About us section */
 .about{
   overflow: hidden;
@@ -133,4 +132,107 @@
 }
 .about div div:nth-child(even){
   position: relative;
+}
+/* FAQ section */
+.faq{
+  padding-top: 20vh;
+  color:silver;
+  min-height: 160vh;
+  background-color: rgba(150, 0, 148, 0.863);
+}
+.questionsContainer{
+  text-align: left;
+  animation: slideIn 1s;
+}
+@keyframes slideIn{
+  0%{font-size: 80%;}
+  50%{font-size:70%}
+  100%{font-size: 100%;}
+}
+.question{
+  background-color: #963484;
+  margin-bottom: 4vh;
+}
+.question p{
+  padding: 2%;
+  margin: 1vw;
+  animation:blob 1s;
+}
+.question :nth-last-child(odd){
+  margin-left:5vh;
+  background-color: rgba(150, 80, 131);
+  white-space: nowrap;
+  text-overflow: clip;
+  display:none;
+  animation: slide 2s;
+}
+@keyframes slide{
+  0%{width:0%;opacity: 0.5;}
+  100%{width: 100%;opacity: 1;}
+}
+/* tournament section */
+.tournament{
+  height: 100vh;
+  background-color: #520051;
+  color:white;
+  font-size: 5.5vw;
+}
+.tournamentText{
+  position: absolute;
+  left: 5vw;
+  bottom: 25vh;
+}
+/* Contact section */
+.contact{
+  background-color: rgba(150, 0, 148, 0.863);
+  color:silver;
+  width: 100vw;
+  min-height: 100vh;
+  padding-top:30vh;
+}
+.contactContainer{
+  display: flex;
+  flex-direction: column; 
+  background-color: rgba(150, 0, 148, 0.863);
+  font-size: 2vw;
+  width: 70vw;
+  padding:10vh 10vw 10vh 10vw;
+  text-align: left;
+  margin:0 auto;
+  animation: appear 2s;
+}
+.contact :link{
+  color:silver;
+  animation:color 1s;
+  animation-delay: 3s;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-in;
+}
+@keyframes color{
+  0%{color:silver}
+  50%{color:violet}
+  100%{color:silver}
+}
+/* .contactContainer :nth-child(even){
+  margin-left: 10vw;
+} */
+.Modal{
+  align-items: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(150, 80, 131, 0.959);
+  display: flex;
+  width:60vw;
+  height: 50vh;
+  left:20vw;
+  top:30vh;
+  z-index: 10;
+  color:silver;
+  animation: appear 0.5s;
+}
+.Modal span{
+  margin-left: 5%;
+  width: 90%;
+  text-align: right;
 }

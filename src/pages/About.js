@@ -6,22 +6,22 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 function getPhotos() {
   return [{
     id:'1',
-    src: '/static/media/artimg3.9de281c4.png',
+    src:require('../images/artimg3.png'),
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     textColor:'white'
   }, {
     id:'2',
-    src: '/static/media/img4.a7b66573.png',
+    src:require('../images/img4.png'),
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     textColor:'rgb(177,165,51)'
   }, {
     id:'3',
-    src: '/static/media/artimg1.3ead6513.png',
+    src:require('../images/artimg1.png'),
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     textColor:'rgb(156,221,237)'
   }, {
     id:'4',
-    src: '/static/media/artimg2.5dd6f64a.png',
+    src:require('../images/artimg2.png'),
     text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },];
 }
@@ -52,32 +52,4 @@ function About() {
     )
 }
 
-{/* <div className="about">
-{photos.map((photo) =>
-
-  {
-    if(photo.id%2===0)
-      {
-        return(
-          <div className="pairContainer" key={photo.id}>
-            <LazyLoadImage
-            src={photo.src}
-            alt={photo.src}
-            effect="blur"/>
-            <animated.div style={slideRight}>{photo.text}</animated.div>
-          </div> 
-        )}else{
-          return(
-          <div className="pairContainer" key={photo.id}>
-          <LazyLoadImage
-          src={photo.src}
-          alt={photo.src}
-          effect="blur"/>
-          <animated.div style={slideLeft}>{photo.text}</animated.div>
-        </div> )
-        }
-      
-  }
-)}
-</div> */}
 export default About;
