@@ -2,16 +2,19 @@ import React from 'react';
 import logo from '../images/logo.png'
 import {Parallax} from 'react-parallax'
 import {useSpring, animated} from 'react-spring'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
+function Background(){
+  return(
+    <picture src={require("../images/img3.png")}></picture>
+  )
+}
 function Home() {
   const move = useSpring({ config:{ duration:1000 }, marginLeft: 0  , from: { marginLeft: 500 } })
   const appear = useSpring({ config:{ duration:1500 }, opacity:1 , from: {opacity:0} })
   return (
     <div className="home">
-      <Parallax bgImage={require('../images/img3.png')} strength={0} style={{filter:"saturate(1)"}}>
-
+      <Background/>
+  
       <animated.div style={move}>
         <img src={logo} alt="logo" className="logo"/>
       </animated.div>
@@ -33,7 +36,6 @@ function Home() {
             </iframe>
         </div>
       </animated.div>
-      </Parallax>
     </div>
   );
 }

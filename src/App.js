@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css'
 import Home from "./pages/Home"
 import About from "./pages/About"
@@ -7,7 +7,6 @@ import Team from "./pages/Team"
 import Faq from "./pages/Faq"
 import Tournament from "./pages/Tournament"
 import Contact from "./pages/Contact"
-import {useSpring, animated, config} from 'react-spring'
 import Navigation from './components/Navigation'
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {

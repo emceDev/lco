@@ -71,14 +71,40 @@
   from{color:silver}
   to{color:yellow}
 }
-.navigation div{
-  display: flex;
-  flex-direction: column;
-}
+
 .navigation div *{
   font-size: 60%;
   padding:0px;
 }
+.LogInSection{
+  animation:slide 2s;
+}
+
+/* home section */
+.home{
+background-color:rgba(170, 56, 139, 0.863);
+background-image:url(images/img3x900.png);
+background-size: cover;
+background-repeat: no-repeat;
+}
+@media (min-width:1300px){
+  .home{
+    background-image:url(images/img3x1300.png)
+  }
+}
+@media (min-width:1200px){
+  .home{
+    background-image:url(images/img3x1200.png)
+  }
+}
+@media (min-width:1024px){
+  .home{
+    background-image:url(images/img3x1024.png)
+  }
+}
+
+
+
 /* team section */
 .team{
   padding-top: 20vh;

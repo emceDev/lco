@@ -1,19 +1,5 @@
-import React, { useState, useRef } from 'react';
-import Tooltip from 'react-bootstrap/Tooltip'
-import Overlay from 'react-bootstrap/Overlay';
-
-function Copy(event){
-    const addres=event.target.textContent
-    navigator.clipboard.writeText(addres)
-}
+import React from 'react';
 export class Contact extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        };
-      }
-
     render(){
         return(
         <div className="contact">
