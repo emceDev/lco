@@ -6,22 +6,22 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 function getPhotos() {
   return [{
     id:'1',
-    src:require('../images/artimg3.png'),
+    src:require('../images/artimg31200.jpg'),
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     textColor:'white'
   }, {
     id:'2',
-    src:require('../images/img4.png'),
+    src:require('../images/img41200.jpg'),
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     textColor:'rgb(177,165,51)'
   }, {
     id:'3',
-    src:require('../images/artimg1.png'),
+    src:require('../images/artimg11200.jpg'),
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     textColor:'rgb(156,221,237)'
   }, {
     id:'4',
-    src:require('../images/artimg2.png'),
+    src:require('../images/artimg21200.jpg'),
     text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit'
   },];
 }

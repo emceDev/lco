@@ -1,6 +1,5 @@
 import React from 'react';
 import TeamMember from '../components/TeamMember';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const members = require("../data/team.json")
@@ -8,22 +7,22 @@ const members = require("../data/team.json")
 
 function getPhoto(){
   return[{
-    src:require("../images/member1.png")
+    src:require("../images/member1768.jpg")
   },
   {
-    src:require("../images/member1.png")
+    src:require("../images/member1768.jpg")
   },
   {
-    src:require("../images/member1.png")
+    src:require("../images/member1768.jpg")
   },
   {
-    src:require("../images/member1.png")
+    src:require("../images/member1768.jpg")
   },
   {
-    src:require("../images/member1.png")
+    src:require("../images/member1768.jpg")
   },
   {
-    src:require("../images/member1.png")
+    src:require("../images/member1768.jpg")
   }]
 }
 const photo = getPhoto()

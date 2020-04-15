@@ -41,7 +41,7 @@ import LogIn from './LogIn'
         flexDirection:"column"}}
         >
 
-        <Link >Register</Link>
+        <Link onClick={()=>{setDisplay(!LogInDisplay)}}>Register</Link>
         <Link onClick={()=>{setDisplay(!LogInDisplay)}}>LogIn</Link>
         </animated.div>
       </div>

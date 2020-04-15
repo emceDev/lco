@@ -49,6 +49,7 @@
   font-size: 2.5vw;
   background-color: rgba(170, 56, 139, 0.863);
   border-radius: 1px;
+  opacity: 0.8;
 }
 .navigation a{
   color:inherit;
@@ -67,9 +68,10 @@
 .deactivated{
   color:silver;
 }
+
 @keyframes lighten{
-  from{color:silver}
-  to{color:yellow}
+  from{color:silver;opacity:0.8}
+  to{color:yellow;opacity: 1}
 }
 
 .navigation div *{
@@ -83,25 +85,37 @@
 /* home section */
 .home{
 background-color:rgba(170, 56, 139, 0.863);
-background-image:url(images/img3x900.png);
+/* background-image:url(images/img3x900.png); */
 background-size: cover;
 background-repeat: no-repeat;
 }
-@media (min-width:1300px){
+
+@media (max-width:1300px){
   .home{
     background-image:url(images/img3x1300.png)
   }
 }
-@media (min-width:1200px){
+@media (max-width:1190px){
   .home{
-    background-image:url(images/img3x1200.png)
+    background-image:url(images/img31200.jpg)
   }
 }
-@media (min-width:1024px){
+@media (max-width:1000px){
   .home{
-    background-image:url(images/img3x1024.png)
+    background-image:url(images/img31024.jpg)
   }
 }
+@media (max-width:760px){
+  .home{
+    background-image:url(images/img3768.jpg)
+  }
+}
+@media (max-width:630px){
+  .home{
+    background-image:url(images/img3640.jpg)
+  }
+}
+
 
 
 
@@ -164,7 +178,7 @@ background-repeat: no-repeat;
   padding-top: 20vh;
   color:silver;
   min-height: 160vh;
-  background-color: rgba(150, 0, 148, 0.863);
+  background-color: rgb(105, 7, 104);
 }
 .questionsContainer{
   text-align: left;
@@ -176,7 +190,7 @@ background-repeat: no-repeat;
   100%{font-size: 100%;}
 }
 .question{
-  background-color: #963484;
+  background-color: #791166b9;
   margin-bottom: 4vh;
 }
 .question p{
@@ -186,7 +200,7 @@ background-repeat: no-repeat;
 }
 .question :nth-last-child(odd){
   margin-left:5vh;
-  background-color: rgba(150, 80, 131);
+  background-color: rgba(119, 5, 89, 0.726);
   white-space: nowrap;
   text-overflow: clip;
   display:none;
@@ -210,7 +224,7 @@ background-repeat: no-repeat;
 }
 /* Contact section */
 .contact{
-  background-color: rgba(150, 0, 148, 0.863);
+  background-color: rgb(90, 8, 89);
   color:silver;
   width: 100vw;
   min-height: 100vh;
@@ -219,7 +233,7 @@ background-repeat: no-repeat;
 .contactContainer{
   display: flex;
   flex-direction: column; 
-  background-color: rgba(150, 0, 148, 0.863);
+  background-color: rgba(150, 0, 147, 0.294);
   font-size: 2vw;
   width: 70vw;
   padding:10vh 10vw 10vh 10vw;
