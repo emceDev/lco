@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import logo from "../images/logo.png";
+import logo3 from "../images/logo3.png";
+import logo1 from "../images/logo1.png";
+import logo2 from "../images/logo2.png";
+
 import { useSpring, animated } from "react-spring";
 import bg1 from "../images/img3640.jpg";
 import bg2 from "../images/img3768.jpg";
@@ -19,8 +22,10 @@ const homeBackground = {
 
 function Home() {
 	const [loaded, setloaded] = useState(false);
+	const [logoloaded, setlogoloaded] = useState(false);
 	const [vw, setvw] = useState(window.innerWidth);
 	const [background, setBackground] = useState(bg1);
+	const [logo, setlogo] = useState(logo1);
 	useEffect(() => {
 		window.addEventListener("resize", () => setvw(window.innerWidth));
 	}, []);
@@ -28,12 +33,15 @@ function Home() {
 		console.log(vw);
 		if (vw < 640) {
 			setBackground(bg1);
+			setlogo(logo3);
 		} else if (vw < 768 && vw > 640) {
 			setBackground(bg2);
+			setlogo(logo2);
 		} else if (vw < 1024 && vw > 768) {
 			setBackground(bg3);
 		} else {
 			setBackground(bg);
+			setlogo(logo1);
 			window.removeEventListener("resize", () => setvw(window.innerWidth));
 		}
 	}, [vw]);
@@ -50,7 +58,6 @@ function Home() {
 	return (
 		<div className="home">
 			<div>
-				{/* // <img src={bg} style={homeBackground} /> */}
 				<img
 					src={background}
 					style={homeBackground}
@@ -75,7 +82,19 @@ function Home() {
 				) : null}
 			</div>
 			<animated.div style={move}>
-				<img src={logo} alt="logo" className="logo" />
+				<img
+					src={logo}
+					alt="logo"
+					className="logo"
+					style={{ width: "0%" }}
+					onLoad={(e) => {
+						e.target.style.width = "auto";
+						setlogoloaded(true);
+					}}
+				/>
+				{logoloaded === false ? (
+					<img src={logo3} alt="logo" className="logo" />
+				) : null}
 			</animated.div>
 
 			<animated.div className="tag" style={move}>
