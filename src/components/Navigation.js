@@ -37,9 +37,9 @@ import LogIn from './LogIn'
         <animated.div
         className="LogInSection"
         style={{
-        display:LogInSectionDisplay ? "flex":"none",
-        flexDirection:"column"}}
-        >
+          display:LogInSectionDisplay ? "flex":"none",
+          flexDirection:"column"
+        }}>
 
         <Link onClick={()=>{setDisplay(!LogInDisplay)}}>Register</Link>
         <Link onClick={()=>{setDisplay(!LogInDisplay)}}>LogIn</Link>
