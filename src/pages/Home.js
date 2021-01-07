@@ -81,20 +81,21 @@ function Home() {
 			<animated.div className="tag" style={move}>
 				Go for it Team!
 			</animated.div>
-
-			<animated.div style={appear}>
-				<div className="video">
-					<iframe
-						title="video"
-						width="560"
-						height="315"
-						src="https://www.youtube.com/embed/hqvGOPB0KmQ"
-						frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-				</div>
-			</animated.div>
+			{loaded === true ? (
+				<animated.div style={appear}>
+					<div className="video">
+						<iframe
+							title="video"
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/hqvGOPB0KmQ"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</div>
+				</animated.div>
+			) : null}
 		</div>
 	);
 }
